@@ -15,15 +15,9 @@ jobs:
           java-version: '21'
           distribution: 'temurin'
       - name: Build with Gradle
-        run: 
-          cd app
-          ./gradlew checkstyleMain
-        working-directory: app
+        run: ./app/gradlew checkstyleMain
       - name: Test with Gradle
-        run: 
-          cd app
-          ./gradlew test
-        working-directory: app
+        run: ./app/gradlew test
       # - name: Publish code coverage
       #   uses: paambaati/codeclimate-action@v9.0.0
       #   env:
