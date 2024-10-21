@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class SomeClassTest {
 
-    String expectedResultTestStylish = "{\n"
+    private final String expectedResultTestStylish = "{\n"
             + "  - follow: false\n"
             + "    host: hexlet.io\n"
             + "  - proxy: 123.234.53.22\n"
@@ -14,7 +14,7 @@ public class SomeClassTest {
             + "  + timeout: 20\n"
             + "  + verbose: true\n"
             + "}";
-    String expectedResultTestWithObject = "{\n"
+    private final String expectedResultTestWithObject = "{\n"
             + "    chars1: [a, b, c]\n"
             + "  - chars2: [d, e, f]\n"
             + "  + chars2: false\n"
@@ -39,7 +39,7 @@ public class SomeClassTest {
             + "  - setting3: true\n"
             + "  + setting3: none\n"
             + "}";
-    String expectedResultTestPlain = "Property 'chars2' was updated. From [complex value] to false\n"
+    private final String expectedResultTestPlain = "Property 'chars2' was updated. From [complex value] to false\n"
             + "Property 'checked' was updated. From false to true\n"
             + "Property 'default' was updated. From null to [complex value]\n"
             + "Property 'id' was updated. From 45 to null\n"
@@ -52,7 +52,7 @@ public class SomeClassTest {
             + "Property 'setting1' was updated. From 'Some value' to 'Another value'\n"
             + "Property 'setting2' was updated. From 200 to 300\n"
             + "Property 'setting3' was updated. From true to 'none'";
-    String expectedResultTestJson = "[{\"oldValue\":false,\"key\":\"follow\",\"status\":\"removed\"},"
+    private final String expectedResultTestJson = "[{\"oldValue\":false,\"key\":\"follow\",\"status\":\"removed\"},"
             + "{\"value\":\"hexlet.io\",\"key\":\"host\",\"status\":\"unchanged\"},"
             + "{\"oldValue\":\"123.234.53.22\",\"key\":\"proxy\",\"status\":\"removed\"},"
             + "{\"newValue\":20,\"oldValue\":50,\"key\":\"timeout\",\"status\":\"updated\"},"

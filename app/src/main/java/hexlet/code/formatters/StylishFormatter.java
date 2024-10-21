@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Map;
 
 public class StylishFormatter implements Formatter {
+    @Override
     public String format(List<Map<String, Object>> diffs) {
         StringBuilder result = new StringBuilder();
         result.append("{\n");
